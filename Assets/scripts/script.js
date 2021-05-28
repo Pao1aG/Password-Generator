@@ -114,9 +114,14 @@ function generatePassword() {
     //Algorithm for choosing a random character from combinedString
     var arr = new Array(characterNumber);
     console.log(arr); //empty but created array with #of spaces equal to #of characters user chose
+   
+    // for empty array "var" that is the length of characterNumber
     for(var i = 0; i < arr.length; i++ ) {
+      //randomValue is now a random place(index) along the combinedString length
       var randomValue = Math.floor(Math.random() * combinedString.length); //found at StackOverflow t.ly/49CN
+      //randomChar has the value of the character in combinedString at the index of randomValue.
       var randomChar = combinedString[randomValue];
+      //now the array at index(the place in the loop), will contain the randomChar
       arr[i] = randomChar;
       console.log("randomValue: " + randomValue + "  |  randomChar: " + randomChar);
     }
