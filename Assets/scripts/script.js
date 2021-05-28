@@ -9,7 +9,7 @@ function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
   passwordText.value = password;
-}
+};
 
 function generatePassword() {
   //VARIABLE FOR SELECTING NUMBER OF CHARACTERS
@@ -128,10 +128,10 @@ function generatePassword() {
     console.log(arr);
 
     //Converting array to string
-    var passwordText = arr.join();
+    var passwordText = arr.join("");
     console.log(passwordText);
-    //Diplaying generated password on document id=password
     return passwordText;
+    //Diplaying generated password on document id=password
   };
   
 
