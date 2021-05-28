@@ -28,4 +28,4 @@ Access the webpage here:
 
 ## Images
 
-![Screenshot of Password Generator](Assets\images\passwordGenerator_screenshot.png)
+![Screenshot of Password Generator](Assets/images/passwordGenerator_screenshot.png)
