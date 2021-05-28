@@ -28,16 +28,8 @@ function generatePassword() {
     alert("You have chosen " + characterNumber + " characters.");
   } else if (characterNumber <= 8 || characterNumber >= 128) {
     console.log("User selected a number out of range");
-    alert("You selected a number out of range.");
-    //insert function that loops prompt
-    var tryAgain = prompt("Please select a number between 8 and 128");
-    alert("You have chosen " + tryAgain + " characters.");
-  } else if (characterNumber !== Number || characterNumber === String) {
-    console.log("User selected a non-numeric value");
-    alert("You have chosen a non-numeric value.");
-    //insert function that loops prompt
-    var tryAgain = prompt("Please select a number between 8 and 128");
-    alert("You have chosen " + tryAgain + " characters.");
+    alert("You selected a number out of range. Please try again");
+    return;
   } else {
     return;
   };
@@ -81,7 +73,8 @@ function generatePassword() {
       
     } else {
       console.log("User does not want uppercase");
-    };
+      };
+    
 
   //Does user want special char?
   parameters.special = confirm ("Would you like to include special characters?");
@@ -93,6 +86,13 @@ function generatePassword() {
 
     } else {
       console.log("User does not want special characters");
+      if (parameters.lowercase === true && parameters.uppercase === true) {
+        combinedString = combinedString;
+        console.log(combinedString);
+      } else if (parameters.lowercase === true && parameters.uppercase === false) {
+        combinedString = combinedString +
+        console.log(combinedString);
+      }
     };
 
   //Does user want numeric values?
