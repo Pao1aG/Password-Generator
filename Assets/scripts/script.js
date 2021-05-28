@@ -113,17 +113,22 @@ function generatePassword() {
 
     //Algorithm for choosing a random character from combinedString
     var arr = new Array(characterNumber);
-    console.log(arr);
+    console.log(arr); //empty but created array with #of spaces equal to #of characters user chose
     for(var i = 0; i < arr.length; i++ ) {
-      var randomValue = Math.floor(Math.random() * combinedString.length);
+      var randomValue = Math.floor(Math.random() * combinedString.length); //found at StackOverflow t.ly/49CN
       var randomChar = combinedString[randomValue];
       arr[i] = randomChar;
       console.log("randomValue: " + randomValue + "  |  randomChar: " + randomChar);
     }
     console.log(arr);
 
-    console.log(randomCharacters);
+    //Converting array to string
+    var passwordText = arr.join();
+    console.log(passwordText);
+    //Diplaying generated password on document id=password
+    return passwordText;
   };
+  
 
 // Add event listener to generate button-------------------------------
 generateBtn.addEventListener("click", writePassword)
