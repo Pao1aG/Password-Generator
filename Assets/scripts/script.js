@@ -86,13 +86,6 @@ function generatePassword() {
 
     } else {
       console.log("User does not want special characters");
-      if (parameters.lowercase === true && parameters.uppercase === true) {
-        combinedString = combinedString;
-        console.log(combinedString);
-      } else if (parameters.lowercase === true && parameters.uppercase === false) {
-        combinedString = combinedString +
-        console.log(combinedString);
-      }
     };
 
   //Does user want numeric values?
@@ -115,11 +108,11 @@ function generatePassword() {
     var arr = new Array(characterNumber);
     console.log(arr); //empty but created array with #of spaces equal to #of characters user chose
    
-    // for empty array "var" that is the length of characterNumber
+    // for empty array that is the length of characterNumber
     for(var i = 0; i < arr.length; i++ ) {
-      //randomValue is now a random place(index) along the combinedString length
+      //randomValue is now a random place along the combinedString length
       var randomValue = Math.floor(Math.random() * combinedString.length); //found at StackOverflow t.ly/49CN
-      //randomChar has the value of the character in combinedString at the index of randomValue.
+      //randomChar has the value of the character in combinedString at the place/index of randomValue.
       var randomChar = combinedString[randomValue];
       //now the array at index(the place in the loop), will contain the randomChar
       arr[i] = randomChar;
