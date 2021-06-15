@@ -5,6 +5,7 @@
 * Description
 * Usage
 * Images
+* License
 
 ---
 
@@ -29,3 +30,7 @@ Access the webpage here:
 ## Images
 
 ![Screenshot of Password Generator](Assets/images/passwordGenerator_screenshot.png)
+
+## License
+
+This project is licensed under MIT License.
